@@ -211,8 +211,8 @@ document.getElementById("date&time").innerHTML = d;
 </button>
 <script>
     async function getLastUpdatedTime() {
-        const username = 'nr0025';
-        const repo = 'FY0025';
+        const username = 'FEPSFY6884870';
+        const repo = 'FY6884870';
        
         const url = `https://api.github.com/repos/${username}/${repo}/commits`;
         try {
@@ -271,10 +271,13 @@ document.getElementById("date&time").innerHTML = d;
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
+    const IntroductionCount = displayWordCount("Introduction");
+    const FundamentalCount = displayWordCount("The Four Fundamental Forces");
+    const BernoulliCount = displayWordCount("Bernoulli's Principle & air foil");
+    const AoACount = displayWordCount("Angle of Attack & Flow separation");
+    const ConclusionCount = displayWordCount("Conclusion");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
+    const totalWordCount = IntroductionCount + FundamentalCount + BernoulliCount + AoACount + ConclusionCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
